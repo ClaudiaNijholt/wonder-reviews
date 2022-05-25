@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- STYLESHEETS -->
-    <link href="<?php echo get_stylesheet_directory_uri() . '../../../../../css/style.css'; ?>" rel="stylesheet">
+    <link href="<?php echo get_stylesheet_directory_uri() . '/scss/style.css'; ?>" rel="stylesheet">
 
     <!-- JAVASCRIPT -->
     <script src="<?php echo get_stylesheet_directory_uri() . '/assets/js/script.js'; ?>" type="text/javascript"></script>

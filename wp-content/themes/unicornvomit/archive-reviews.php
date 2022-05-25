@@ -1,7 +1,7 @@
 <?php
 
-/** config for home template **/
 $archive = get_post_type_archive_link('reviews');
+
 ?>
 
 <div>
@@ -18,7 +18,7 @@ $archive = get_post_type_archive_link('reviews');
 </div>
 <h3 class="slowgun">Wereld vol wonderen</h3>
 <br>
-<h1 class="h1-homepage">Laatste reviews</h1>
+<h1 class="h1-reviewpage">Alle Reviews</h1>
 <br>
 <?php
 
@@ -30,12 +30,14 @@ $reviewsItemCollection = get_posts($arguments);
 
 foreach ($reviewsItemCollection as $review) {
     var_dump(get_permalink($review));
-    ?>
+?>
     <div class="review">
-        <div class="review-img"><img src="<?php echo get_field('image', $review->ID)?>" alt=""></div>
-        <h1><?php echo $review->post_title; ?></h1>
-        <p><?php echo get_field('score', $review->ID)?>/10</p>
-        <p>Posted on: <?php echo $review->post_date?></p>
+        <div class="review-img"><img src="<?php echo get_field('image', $review->ID) ?>" alt=""></div>
+        <div class="review-text">
+            <h1><?php echo $review->post_title; ?></h1>
+            <p><?php echo get_field('score', $review->ID) ?>/10</p>
+            <p>Posted on: <?php echo $review->post_date ?></p>
+        </div>
     </div>
 <?php
 }
